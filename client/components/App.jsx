@@ -2,6 +2,7 @@ import React from 'react'
 
 import Title from './Title';
 import Game from './Game';
+import Board from './Board';
 
 
 const App = () => {
@@ -9,6 +10,7 @@ const App = () => {
         <React.Fragment>
             <Title />
             <Game />
+            <Board />
         </React.Fragment>
     )
   }
