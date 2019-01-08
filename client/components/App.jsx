@@ -1,13 +1,15 @@
 import React from 'react'
 
+import Title from './Title';
+import Game from './Game';
+
 
 const App = () => {
     return (
-        <div>
-            <h1>
-                I am a snake snake
-            </h1>
-        </div>
+        <React.Fragment>
+            <Title />
+            <Game />
+        </React.Fragment>
     )
   }
 
