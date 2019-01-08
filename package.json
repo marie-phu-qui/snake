@@ -17,7 +17,7 @@
     "setupFiles": [
       "./tests/setup-env.js"
     ]
-  },  
+  },
   "babel": {
     "presets": [
       "@babel/preset-env",
@@ -25,11 +25,11 @@
     ]
   },
   "dependencies": {
+    "react": "^16.7.0",
     "react-dom": "^16.7.0",
     "react-router-dom": "^4.3.1",
     "superagent": "^4.1.0",
     "webpack": "^4.28.3",
-    "react": "^16.7.0",
     "webpack-cli": "^3.2.0"
   },
   "devDependencies": {
@@ -41,8 +41,8 @@
     "babel-loader": "^8.0.5",
     "enzyme": "^3.8.0",
     "enzyme-adapter-react-16": "^1.7.1",
-    "nodemon": "^1.18.4",
     "jest": "^23.6.0",
+    "nodemon": "^1.18.4",
     "supertest": "^3.3.0"
   },
   "resolutions": {
