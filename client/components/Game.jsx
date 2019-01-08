@@ -3,11 +3,13 @@ import React from 'react'
 
 const Game = () => {
     return (
-        <div>
+        <React.Fragment>
             <h4>
                 the game
             </h4>
-        </div>
+
+
+        </React.Fragment>
     )
   }
 
