@@ -11,18 +11,40 @@ class Snake extends React.Component {
             x : 100,
             y : 100
         };
+        this.handleClick = this.handleClick.bind(this);
         this.handleChange = this.handleChange.bind(this);
+        this.handleKey = this.handleKey.bind(this);
       }
-    
-      handleChange(e) {
+    handleClick(e) {
+        console.log('pouet')
+        Stage.focus()
+    };
+    handleChange(e) {
         this.setState({
           ...this.state,
           [e.target.name]: e.target.value
+        })
+    };
+    handleKey(e){
+        Stage.addEventListener('keydown', function (e) {
+        if (e.keyCode === 37) {
+            Rect.x(Rect.x() - 4);
+        } else if (e.keyCode === 38) {
+            Rect.y(Rect.y() - 4);
+        } else if (e.keyCode === 39) {
+            Rect.x(Rect.x() + 4);
+        } else if (e.keyCode === 40) {
+            Rect.y(Rect.y() + 4);
+        } else {
+            return;
+        }
+        e.preventDefault();
+        layer.batchDraw();
         });
       }
   render() {
     return (
-        <Stage width={window.innerWidth} height={window.innerHeight}>
+        <Stage width={window.innerWidth} height={window.innerHeight} onClick={this.handleClick}>
         <Layer>
             <Text text="one square sized snake - moves on keyboard input" />
             <Rect
