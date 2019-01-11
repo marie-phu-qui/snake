@@ -2,7 +2,8 @@ import React from 'react'
 
 import Title from './Title';
 import Game from './Game';
-import Board from './Board';
+import ColoredRect from './ColoredRect';
+import Snake from './Snake';
 
 
 const App = () => {
@@ -10,7 +11,8 @@ const App = () => {
         <React.Fragment>
             <Title />
             <Game />
-            <Board />
+            <ColoredRect />
+            <Snake />
         </React.Fragment>
     )
   }
