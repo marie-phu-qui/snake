@@ -5,8 +5,8 @@ import { Stage, Layer, Rect, Text } from 'react-konva';
 class Snake extends React.Component {
   state = {
     color: 'green',
-    x : '',
-    y : ''
+    x : 100,
+    y : 100
   };
   handleClick = () => {
     this.setState({
@@ -15,13 +15,18 @@ class Snake extends React.Component {
   };
   render() {
     return (
-      <Rect
-          x={this.state.x}
-          y={this.state.y}
-          width={10}
-          height={10}
-          fill={this.state.color}
-      />
+        <Stage width={window.innerWidth} height={window.innerHeight}>
+        <Layer>
+            <Text text="Konva Rect" />
+            <Rect
+                x={this.state.x}
+                y={this.state.y}
+                width={10}
+                height={10}
+                fill={this.state.color}
+            />
+        </Layer>
+        </Stage>
     )
 }
 }

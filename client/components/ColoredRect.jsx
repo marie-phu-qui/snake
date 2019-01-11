@@ -21,8 +21,8 @@ class ColoredRect extends React.Component {
           <Rect
             x={20}
             y={20}
-            width={50}
-            height={50}
+            width={500}
+            height={500}
             fill={this.state.color}
             shadowBlur={5}
             onClick={this.handleClick}
