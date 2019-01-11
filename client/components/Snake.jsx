@@ -17,7 +17,7 @@ class Snake extends React.Component {
     return (
         <Stage width={window.innerWidth} height={window.innerHeight}>
         <Layer>
-            <Text text="Konva Rect" />
+            <Text text="one square sized snake" />
             <Rect
                 x={this.state.x}
                 y={this.state.y}
