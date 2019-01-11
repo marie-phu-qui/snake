@@ -2,7 +2,8 @@ import React, { Component } from 'react';
 import { render } from 'react-dom';
 import { Stage, Layer, Rect, Text } from 'react-konva';
 import Konva from 'konva';
- 
+
+// Get to know Konva exemple
 class Board extends React.Component {
   state = {
     color: 'green'
@@ -16,7 +17,7 @@ class Board extends React.Component {
     return (
         <Stage width={window.innerWidth} height={window.innerHeight}>
         <Layer>
-          <Text text="Try click on rect" />
+          <Text text="Click on the square to change color" />
           <Rect
             x={20}
             y={20}
