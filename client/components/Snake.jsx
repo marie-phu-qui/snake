@@ -17,7 +17,7 @@ class Snake extends React.Component {
       }
     handleClick(e) {
         console.log('pouet')
-        Stage.focus()
+        e.focus()
     };
     handleChange(e) {
         this.setState({
@@ -26,25 +26,25 @@ class Snake extends React.Component {
         })
     };
     handleKey(e){
-        Stage.addEventListener('keydown', function (e) {
-        if (e.keyCode === 37) {
-            Rect.x(Rect.x() - 4);
-        } else if (e.keyCode === 38) {
-            Rect.y(Rect.y() - 4);
-        } else if (e.keyCode === 39) {
-            Rect.x(Rect.x() + 4);
-        } else if (e.keyCode === 40) {
-            Rect.y(Rect.y() + 4);
-        } else {
-            return;
-        }
-        e.preventDefault();
-        layer.batchDraw();
-        });
+        console.log('keyboard')
+        // Stage.addEventListener('keydown', function (e) {
+        // if (e)vent.key === 37) {
+        //     Rect.x(Rect.x() - 4);
+        // } else if (event.key === 38) {
+        //     Rect.y(Rect.y() - 4);
+        // } else if (event.key === 39) {
+        //     Rect.x(Rect.x() + 4);
+        // } else if (event.key === 40) {
+        //     Rect.y(Rect.y() + 4);
+        // } else {
+        //     return;
+        // }
+        // e.preventDefault();
+        // });
       }
   render() {
     return (
-        <Stage width={window.innerWidth} height={window.innerHeight} onClick={this.handleClick}>
+        <Stage width={window.innerWidth} height={window.innerHeight} onClick={this.handleClick} >
         <Layer>
             <Text text="one square sized snake - moves on keyboard input" />
             <Rect
@@ -53,6 +53,7 @@ class Snake extends React.Component {
                 width={10}
                 height={10}
                 fill={this.state.color}
+                handleKey={() => this.handleKey()}
             />
         </Layer>
         </Stage>
