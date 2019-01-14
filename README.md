@@ -22,3 +22,8 @@ I have been setting many projects that I want to create, but also would love to 
 - Have a start button
 
 - Have a score view
+
+
+## Rules
+
+Using canvas (here react-konva), we have a snake inside a board. The snake is ungry and on the hunt for food. It can't stop moving. Food is appearing on the board at random places, one at a time. Everytime the snake grab a piece of this food it becomes one element longer. If the snake touches either itself (death by enrollment) or the board (hit death), the game is over.
